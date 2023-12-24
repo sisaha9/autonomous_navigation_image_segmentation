@@ -41,6 +41,6 @@ RUN ln -s /usr/local/nvidia/bin/nvidia-smi /opt/conda/bin/nvidia-smi
 USER $NB_UID:$NB_GID
 ENV PATH=${PATH}:/usr/local/nvidia/bin
 
-RUN pip install 'git+https://github.com/facebookresearch/fvcore'
+RUN pip install 'git+https://github.com/sisaha9/fvcore@v0.1_used'
 RUN RUN git clone -b v0.1_used https://github.com/sisaha9/detectron2 detectron2_repo
 RUN pip install -e detectron2_repo
